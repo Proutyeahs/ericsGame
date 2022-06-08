@@ -9,11 +9,14 @@
     box-shadow: 0 2px 3px black;
 }
 
-.main-nav ul {
-    list-style: none;
-    display: inline;
+main-nav ul {
     margin: 0;
     padding: 0;
+    list-style: none;
+}
+
+.main-nav ul li{
+    display: inline;
 }
 
 .intro {
