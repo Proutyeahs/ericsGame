@@ -19,6 +19,10 @@
     display: inline;
 }
 
+.main-nav ul li a {
+    color: brown;
+}
+
 .intro {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
