@@ -9,6 +9,11 @@
     box-shadow: 0 2px 3px black;
 }
 
+.main-nav ul li {
+    list-style: none;
+    display: inline;
+}
+
 .intro {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
