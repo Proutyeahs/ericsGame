@@ -1,12 +1,16 @@
+.site-header {
+    background: rgb(63, 63, 63);
+    padding: 10px 5%;
+    box-shadow: 0 2px 3px black;
+}
+
 .site-header h1 {
     color: brown;
     font-size: 20px;
 }
 
-.site-header {
-    background: rgb(63, 63, 63);
-    padding: 10px 5%;
-    box-shadow: 0 2px 3px black;
+.main-nav {
+    float: right;
 }
 
 .main-nav ul {
