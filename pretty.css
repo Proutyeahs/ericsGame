@@ -33,6 +33,7 @@
 }
 
 .billboard {
+    margin-top: 0;
     background: whitesmoke;
     text-align: center;
 }
