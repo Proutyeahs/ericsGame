@@ -38,6 +38,10 @@
     text-align: center;
 }
 
+.columns {
+    width: 90%
+}
+
 .grid {
     float: left;
     width: 70%;
