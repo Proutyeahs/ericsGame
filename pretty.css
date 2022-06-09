@@ -60,4 +60,7 @@
 .footer {
     padding: 5%;
     float: left;
+    background: rgb(63, 63, 63);
+    padding: 20px 5%;
+    box-shadow: 0 2px 3px black;
 }
