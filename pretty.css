@@ -40,7 +40,6 @@
 
 .columns {
     width: 90%
-    margin: 0 auto;
 }
 
 .grid {
@@ -51,5 +50,13 @@
 .info {
     background: gray;
     float: right;
-    width: 30%
+    width: 30%;
+}
+
+.info p {
+    padding: 5%;
+}
+
+.footer {
+    padding: 10%;
 }
