@@ -29,11 +29,11 @@
 }
 
 .intro {
+    margin-top: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .billboard {
-    margin-top: 0;
     background: whitesmoke;
     text-align: center;
 }
