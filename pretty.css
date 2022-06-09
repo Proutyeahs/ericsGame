@@ -31,3 +31,8 @@
 .intro {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+.billboard {
+    background: whitesmoke;
+    text-align: center;
+}
