@@ -37,3 +37,14 @@
     background: whitesmoke;
     text-align: center;
 }
+
+.grid {
+    float: left;
+    width: 70%;
+}
+
+.info {
+    background: gray;
+    float: right;
+    width: 30%
+}
