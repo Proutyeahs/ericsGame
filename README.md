@@ -17,4 +17,4 @@ How to battle
 
 How to make a grid based movement system
 
-How to have sections of the grid unacessable
+How to have sections of the grid inaccessible
