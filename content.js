@@ -37,4 +37,4 @@ var baijiSpecies = new Species("Baiji", "Fresh water dolphin", "water", 1, 10, 1
 
 var monster = document.getElementById("journal");
 
-monster.textContent = JSON.stringify(baijiSpecies);
+monster.textContent = JSON.stringify(baijiSpecies, teratornithidaeSpecies, glyptodonSpecies);
