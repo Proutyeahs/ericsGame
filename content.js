@@ -11,7 +11,7 @@ if (hourNow > 18) {
 } else {
     greeting = 'Careful Zoologist! Earth species are more common at this time.';
 } 
-    //the internet says doc.write is bad...?
+    //this prints every time where the script is tag is placed..
 document.write('<h3>' + greeting + '</h3>');
 
 /* wow this is going to need alot of work.
@@ -36,5 +36,5 @@ var teratornithidaeSpecies = new Species("Teratornithidae", "Large bird of pray"
 var baijiSpecies = new Species("Baiji", "Fresh water dolphin", "water", 1, 10, 10, 10, 10)
 
 var monster = document.getElementById("journal");
-
+//this isnt exactly what im looking to do, but I wanted something on the page for now!
 monster.textContent = JSON.stringify(baijiSpecies);
