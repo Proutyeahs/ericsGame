@@ -35,6 +35,4 @@ var glyptodonSpecies = new Species("Glyptodon", "Large heavily armored mammal", 
 var teratornithidaeSpecies = new Species("Teratornithidae", "Large bird of pray", "air", 1, 10, 10, 10, 10);
 var baijiSpecies = new Species("Baiji", "Fresh water dolphin", "water", 1, 10, 10, 10, 10)
 
-var monster = document.getElementById("journal");
-
-monster.write(baijiSpecies);
+document.getElementById("journal").write(baijiSpecies);
