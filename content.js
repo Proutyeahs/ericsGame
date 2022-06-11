@@ -31,9 +31,9 @@ function Species(name, description, type, lvl, hp, def, att, res) {
     this.res = res;
 }
 //Simple example for now, used the JS&JQuery book to learn this
-var glyptodonSpecies = new Species(Glyptodon, "Large heavily armored mammal", earth, 1, 10, 10, 10, 10);
-var teratornithidaeSpecies = new Species(Teratornithidae, "Large bird of pray", air, 1, 10, 10, 10, 10);
-var baijiSpecies = new Species(Baiji, "Fresh water dolphin", water, 1, 10, 10, 10, 10)
+var glyptodonSpecies = new Species("Glyptodon", "Large heavily armored mammal", "earth", 1, 10, 10, 10, 10);
+var teratornithidaeSpecies = new Species("Teratornithidae", "Large bird of pray", "air", 1, 10, 10, 10, 10);
+var baijiSpecies = new Species("Baiji", "Fresh water dolphin", "water", 1, 10, 10, 10, 10)
 
 var monster = doument.getElementById("journal");
 
