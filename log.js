@@ -18,7 +18,7 @@ var glyptodonSpecies = new Species("Glyptodon", "Large heavily armored mammal", 
 var teratornithidaeSpecies = new Species("Teratornithidae", "Large bird of pray", "air", 1, 10, 10, 10, 10);
 var baijiSpecies = new Species("Baiji", "Fresh water dolphin", "water", 1, 10, 10, 10, 10)
 
-JSON.stringify(baijiSpecies) += document.getElementById("journal");
+var monster = document.getElementById("journal", "journal", "journal");
 //this isnt exactly what im looking to do, but I wanted something on the page for now!
 monster.textContent = JSON.stringify(baijiSpecies);
 monster.textContent = JSON.stringify(glyptodonSpecies);
