@@ -1,18 +1,30 @@
 /* I am going to need to make functions that increase and save the stats as they level up
-I need to review math floor(math random) etc... and add 1-3 stats gained per level to the randomized starting stats
+I need to review math floor(math random) etc... and add 1-4 stats gained per level to the randomized starting stats
 learn how to create the attack and defence interaction 
 */
 
-function Species(name, description, type, lvl, hp, def, att, res) {
+function Species(name, description, type, lvl, exp, hp, def, att, res) {
     this.name = name;
     this.description = description;
     this.type = type;
-    this.lvl = lvl;
-    this.hp = hp;
-    this.def = def;
-    this.att = att;
-    this.res = res;
-}
+    this.lvl = function increaselvl (lvl) {
+        return lvl++ //this needs to increase based on experience
+    };
+    this.exp = exp // this needs to increase based on battles and lvl of opponent
+    this.hp = function increase(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    }; hp = increase(1, 4);
+    this.def = function increase(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    }; def = increase(1, 4);
+    this.att = function increase(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    }; att = increase(1, 4);
+    this.res = function increase(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    }; res = increase(1, 4); 
+};  //needs to add this every time lvl increases..
+
 //Simple example for now, used the JS&JQuery book to learn this
 var glyptodonSpecies = new Species("Glyptodon", "Large heavily armored mammal", "earth", 1, 10, 10, 10, 10);
 var teratornithidaeSpecies = new Species("Teratornithidae", "Large bird of pray", "air", 1, 10, 10, 10, 10);
