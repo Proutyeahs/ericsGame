@@ -2,7 +2,18 @@
 I need to review math floor(math random) etc... and add 1-4 stats gained per level to the randomized starting stats
 learn how to create the attack and defence interaction 
 */
+let exp; // monsters will give the amount of exp equal to what it takes to level them up.
 
+let lvl; // 1-999
+
+let hp; // defence will block a % of hp
+let def;
+let att;
+let res; // resistance to status effects (all effects will do dmg over time)
+
+const type; // 25%? more or less dmg depending on typing (earth, wind, fire and water)
+
+/* trashing this
 function Species(name, description, type, lvl, exp, hp, def, att, res) {
     this.name = name;
     this.description = description;
@@ -33,3 +44,4 @@ var baijiSpecies = new Species("Baiji", "Fresh water dolphin", "water", 1, 10, 1
 var monster = document.getElementById("journal");
 //this isnt exactly what im looking to do, but I wanted something on the page for now!
 monster.textContent = JSON.stringify(baijiSpecies);
+*/
