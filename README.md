@@ -4,17 +4,17 @@ This game will be text heavy, so I have alot of writing to do alongside learning
 
 I still have alot to learn but here are the initial tasks that I have to get me started. I have a basic idea about how these would work, but am unsure about implementation at this point.
 
-How to create animals (check)
+How to create animals (in progress)
 
 how to catch them and save them to an account
 
-How to store stats
+How to store stats (in progress)
 
 How to level up
 
 How to battle
 
 
-How to make a grid based movement system
+How to make a grid based movement system (in progress)
 
-How to have sections of the grid inaccessible
+How to have sections of the grid inaccessible (in progress)
