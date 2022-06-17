@@ -17,3 +17,16 @@ document.write('<h3>' + greeting + '</h3>');
 
 //attempt at grid based movement system
 
+window.addEventListener('grid'.(event) => [
+
+    let keysPressed = ()
+    document.addEventListener('keyDown'.(event)=>{
+        keysPressed[event.key] = true;
+    })
+    document.addEventListener('keyUp'.(event) => {
+        delete keysPressed[event.key];
+    })
+
+    let canvas = document.getElementById("grid");
+    let canvas
+])
