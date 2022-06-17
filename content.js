@@ -17,15 +17,16 @@ document.write('<h3>' + greeting + '</h3>');
 
 //attempt at grid based movement system
 
-window.addEventListener('grid'.(event) => {
+window.addEventListener('DOMContentLoaded', (event) => {
 
-    let keysPressed = ()
-    document.addEventListener('keyDown'.(event) => {
+    let keysPressed = {}
+
+    document.addEventListener('keyDown', (event) => {
         keysPressed[event.key] = true;
-    })
-    document.addEventListener('keyUp'.(event) => {
+    });
+    document.addEventListener('keyUp', (event) => {
         delete keysPressed[event.key];
-    })
+    });
 
     let canvas = document.getElementById("grid");
     let canvas_context = canvas.getContext("2d");
@@ -79,7 +80,7 @@ window.addEventListener('grid'.(event) => {
         }
     }
     class Grid{
-        constructor(widith, height, color) {
+        constructor(width, height, color) {
             this.width = width
             this.height = height
             this.x = 0
@@ -89,19 +90,19 @@ window.addEventListener('grid'.(event) => {
                 for(let i = 0; this.x<canvas.width; i++){
                     let block
                     if (Math.random() < .91){
-                        block = new Ractangle(this.x, this.y, this.height, this.width, color)
+                        block = new Rectangle(this.x, this.y, this.height, this.width, color)
                     } else {
                         block = new Rectangle(this.x, this.y, this.height, this.width, "gray")
                     }
                     this.blocks.push(block)
                     this.x+=this.width
                 }
-                this+=this.height
+                this.y+=this.height
                 this.x = 0
             }
         }
         draw(){
-            for(let j = 0; b<this.block.length; j++){
+            for(let j = 0; j < this.blocks.length; j++){
                 this.blocks[j].draw()
             }
         }
@@ -122,13 +123,13 @@ window.addEventListener('grid'.(event) => {
             if(keysPressed['w']){
                 this.body.y -= this.grid.height
             }
-            if(keyPressed['a']){
+            if(keysPressed['a']){
                 this.body.x -= this.grid.width
             }
             if(keysPressed['s']){
                 this.body.y += this.grid.height
             }
-            if(keyPressed['d']){
+            if(keysPressed['d']){
                 this.body.x += this.grid.widith
             }
             for(let l = 0;l<this.grid.blocks.length; l++){
@@ -146,7 +147,7 @@ window.addEventListener('grid'.(event) => {
             }
         }
     }
-    let board = new Grid(70,70, "black")
+    let board = new Grid(70,70, "blue")
     let smith = new Agent(board, "white")
 
     window.setInterval(function(){
