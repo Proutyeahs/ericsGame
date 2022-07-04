@@ -17,7 +17,7 @@ document.write('<h3>' + greeting + '</h3>');
 
 //attempt at grid based movement system
 
-/* didnt work & deleted to reattempt with better understanding 
+// missing something, currently researching in order to reattempt with better understanding 
 window.addEventListener('DOMContentLoaded', (event) => {
 
     let keysPressed = {}
@@ -156,5 +156,3 @@ window.addEventListener('DOMContentLoaded', (event) => {
         smith.draw()
     }, 140)
 })
-
-*/
