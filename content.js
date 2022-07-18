@@ -17,7 +17,7 @@ document.write('<h3>' + greeting + '</h3>');
 
 //attempt at grid based movement system
 
-// missing something, currently researching in order to reattempt with better understanding 
+// I followed along with a youtube tutorial for the next part. Its missing something, currently researching in order to reattempt with better understanding 
 window.addEventListener('DOMContentLoaded', (event) => {
 
     let keysPressed = {}
