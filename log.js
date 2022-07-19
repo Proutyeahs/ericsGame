@@ -3,6 +3,16 @@ I need to review math floor(math random) etc... and add 1-4 stats gained per lev
 learn how to create the attack and defense interaction 
 */
 
+function attack(type, hp, def, att, res, weapon, oWeapon, oType, oHp, oDef, oAtt, oRes) {
+    let typeAdv = 0;
+
+    if (type == 'earth' && oType == 'earth') {
+        typeAdv += 1;
+    }
+
+    let damage = weapon * (att / oDef) * typeAdv;
+}
+
 let exp  = 0; // monsters will give the amount of exp equal to what it takes to level them up.
 let lvl = 1; // 1-999
 let hp = 10; // defense will block a % of hp
@@ -28,12 +38,12 @@ function Species(name, description, type, lvl, exp, hp, def, att, res) {
     this.name = name;
     this.description = description;
     this.type = type;
-    this.exp
-    this.lvl
-    this.hp
-    this.def
-    this.att
-    this.res
+    this.exp = exp;
+    this.lvl = lvl;
+    this.hp = hp;
+    this.def = def;
+    this.att = att;
+    this.res = res;
 };  //needs to add this every time lvl increases..
 
 //Simple example for now, used the JS&JQuery book to learn this
