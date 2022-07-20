@@ -6,11 +6,46 @@ learn how to create the attack and defense interaction
 function attack(type, hp, def, att, res, weapon, oWeapon, oType, oHp, oDef, oAtt, oRes) {
     let typeAdv = 0;
 
+    if (weapon.attribute) {
+
+    }
+
     if (type == 'earth' && oType == 'earth') {
+        typeAdv += 1;
+    } else if (type == 'earth' && oType == 'wind') {
+        typeAdv += 0.5;
+    } else if (type == 'earth' && oType == 'fire') {
+        typeAdv += 1;
+    } else if (type == 'earth' && oType == 'water') {
+        typeAdv += 2;
+    } else if (type == 'wind' && oType == 'earth') {
+        typeAdv += 2;
+    } else if (type == 'wind' && oType == 'wind') {
+        typeAdv += 1;
+    } else if (type == 'wind' && oType == 'fire') {
+        typeAdv += 0.5;
+    } else if (type == 'wind' && oType == 'water') {
+        typeAdv += 1;
+    } else if (type == 'fire' && oType == 'earth') {
+        typeAdv += 1;
+    } else if (type == 'fire' && oType == 'wind') {
+        typeAdv += 2;
+    } else if (type == 'fire' && oType == 'fire') {
+        typeAdv += 1;
+    } else if (type == 'fire' && oType == 'water') {
+        typeAdv += 0.5;
+    } else if (type == 'water' && oType == 'earth') {
+        typeAdv += 0.5;
+    } else if (type == 'water' && oType == 'wind') {
+        typeAdv += 1;
+    } else if (type == 'water' && oType == 'fire') {
+        typeAdv += 2;
+    } else if (type == 'water' && oType == 'water') {
         typeAdv += 1;
     }
 
     let damage = weapon * (att / oDef) * typeAdv;
+    return damage;
 }
 
 let exp  = 0; // monsters will give the amount of exp equal to what it takes to level them up.
@@ -32,6 +67,22 @@ function lvlUp () {
 }
 lvlUp()
 console.log(lvl, hp, def, att, res);
+
+let weapon = {}
+let dmgTypes = ['none', 'poison', 'burning', 'shock', ]
+
+function rollWeapon() {
+    weapon.attack = Math.floor(Math.random() * 2222) // I have to make sure this isnt OP AF
+    weapon.attribute = Math.floor(Math.random() * dmgTypes.length)
+}
+
+function callDmgOverTime() {
+    if (weapon.attribute === 'posion') {
+
+    }
+}
+
+
 
 // code below is my first attempt, I am in the process of rewriting and merging the two attempts.
 function Species(name, description, type, lvl, exp, hp, def, att, res) {
