@@ -1,13 +1,11 @@
-/* I am going to need to make functions that increase and save the stats as they level up
-I need to review math floor(math random) etc... and add 1-4 stats gained per level to the randomized starting stats
-learn how to create the attack and defense interaction 
-*/
+
+//work on rolling random enemys and assign the stats to the o vars?? 
 
 function attack(type, hp, def, att, res, weapon, oWeapon, oType, oHp, oDef, oAtt, oRes) {
     let typeAdv = 0;
 
     if (weapon.attribute) {
-
+// atribute calls dmg over time take into account res and dmg per turn
     }
 
     if (type == 'earth' && oType == 'earth') {
@@ -48,15 +46,22 @@ function attack(type, hp, def, att, res, weapon, oWeapon, oType, oHp, oDef, oAtt
     return damage;
 }
 
-let exp  = 0; // monsters will give the amount of exp equal to what it takes to level them up.
-let lvl = 1; // 1-999
-let hp = 10; // defense will block a % of hp
-let def = 10;
-let att = 10;
-let res = 10; // resistance to status effects (all effects will do dmg over time)
-let type = ''; // 25%? more or less dmg depending on typing (earth, wind, fire and water)
+let weapon = {}
 
-// if exp = maxForLvl call lvlUp. Need to create exp curve
+function rollWeapon() {
+    weapon.attack = Math.floor(Math.random() * 2222) // I have to make sure this isnt OP AF
+    weapon.attribute = Math.floor(Math.random() * dmgTypes.length)
+}
+
+let dmgTypes = ['none', 'poison', 'burning', 'shock', 'bleed', 'frost', ] //I want the none propety to have higher dmg so its balanced or OP
+// higher the res the less dmg DOT will do and less likely the effect takes place
+
+function callDmgOverTime() {
+    let dmgInc = hp * .01;
+    if (weapon.attribute === 'poison', 'burning', 'shock', 'bleed', 'frost') { // this might now work
+        hp -= dmgInc
+    }
+}
 
 function lvlUp () {
     lvl++
@@ -68,23 +73,7 @@ function lvlUp () {
 lvlUp()
 console.log(lvl, hp, def, att, res);
 
-let weapon = {}
-let dmgTypes = ['none', 'poison', 'burning', 'shock', ]
-
-function rollWeapon() {
-    weapon.attack = Math.floor(Math.random() * 2222) // I have to make sure this isnt OP AF
-    weapon.attribute = Math.floor(Math.random() * dmgTypes.length)
-}
-
-function callDmgOverTime() {
-    if (weapon.attribute === 'posion') {
-
-    }
-}
-
-
-
-// code below is my first attempt, I am in the process of rewriting and merging the two attempts.
+// code below is my first attempt, I am in the process of rewriting
 function Species(name, description, type, lvl, exp, hp, def, att, res) {
     this.name = name;
     this.description = description;
@@ -95,11 +84,11 @@ function Species(name, description, type, lvl, exp, hp, def, att, res) {
     this.def = def;
     this.att = att;
     this.res = res;
-};  //needs to add this every time lvl increases..
+}; 
 
-//Simple example for now, used the JS&JQuery book to learn this
-var glyptodonSpecies = new Species("Glyptodon", "Large heavily armored mammal", "earth", 1, 10, 10, 10, 10);
-var teratornithidaeSpecies = new Species("Teratornithidae", "Large bird of pray", "air", 1, 10, 10, 10, 10);
-var baijiSpecies = new Species("Baiji", "Fresh water dolphin", "water", 1, 10, 10, 10, 10)
+//the description will be alot longer in the final verson, describing in detail what the animals look like
+let glyptodonSpecies = new Species("Glyptodon", "Large heavily armored mammal", "earth", 1, 10, 10, 10, 10);
+let teratornithidaeSpecies = new Species("Teratornithidae", "Large bird of pray", "air", 1, 10, 10, 10, 10);
+let baijiSpecies = new Species("Baiji", "Fresh water dolphin", "water", 1, 10, 10, 10, 10)
 
-var monster = document.getElementById("journal");
+
