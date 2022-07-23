@@ -53,7 +53,7 @@ function rollWeapon() {
     weapon.attribute = Math.floor(Math.random() * dmgTypes.length)
 }
 
-let dmgTypes = ['none', 'poison', 'burning', 'shock', 'bleed', 'frost', ] //I want the none propety to have higher dmg so its balanced or OP
+let dmgTypes = ['none', 'poison', 'burning', 'shock', 'bleed', 'frost'] //I want the none propety to have higher dmg so its balanced or OP
 // higher the res the less dmg DOT will do and less likely the effect takes place
 
 function callDmgOverTime() {
