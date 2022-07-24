@@ -2,6 +2,7 @@ $(ready)
 
 function ready() {
     greeting();
+    displayAni();
 }
 
 function greeting() {
@@ -99,7 +100,8 @@ lvlUp()
 console.log(lvl, hp, def, att, res);
 
 // code below is my first attempt, I am in the process of rewriting
-function Species(name, description, type, lvl, exp, hp, def, att, res) {
+function species(name, description, type, lvl, exp, hp, def, att, res) {
+    //let animals = {}
     this.name = name;
     this.description = description;
     this.type = type;
@@ -112,9 +114,14 @@ function Species(name, description, type, lvl, exp, hp, def, att, res) {
 }; 
 
 //the description will be alot longer in the final verson, describing in detail what the animals look like
-let glyptodonSpecies = new Species("Glyptodon", "Large heavily armored mammal", "earth", 1, 10, 10, 10, 10);
-let teratornithidaeSpecies = new Species("Teratornithidae", "Large bird of pray", "air", 1, 10, 10, 10, 10);
-let baijiSpecies = new Species("Baiji", "Fresh water dolphin", "water", 1, 10, 10, 10, 10)
+let glyptodonSpecies = new species("Glyptodon", "Large heavily armored mammal", "earth", 1, 10, 10, 10, 10);
+let teratornithidaeSpecies = new species("Teratornithidae", "Large bird of pray", "air", 1, 10, 10, 10, 10);
+let baijiSpecies = new species("Baiji", "Fresh water dolphin", "water", 1, 10, 10, 10, 10)
+
+function displayAni() {
+    $('#animalDesc').append(`${Species.description}`)
+    $('#journal').append(`${Species.description}`)
+}
 
 
 // I want to diplay a map and track the location using a grid in the background and highlight the tile on the map that is the users location
